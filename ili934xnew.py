@@ -54,8 +54,8 @@ def color565(r, g, b):
 
 class ILI9341:
 
-    width = 320
-    height = 240
+    width = 240
+    height = 320
 
     def __init__(self, spi, cs, dc, rst):
         self.spi = spi
@@ -106,8 +106,8 @@ class ILI9341:
             (_PWCTRL2, b"\x10"),
             (_VMCTRL1, b"\x3e\x28"),
             (_VMCTRL2, b"\x86"),
-            #(_MADCTL, b"\x48"),
-            (_MADCTL, b"\x08"),
+            (_MADCTL, b"\x48"),
+            #(_MADCTL, b"\x08"),
             (_PIXSET, b"\x55"),
             (_FRMCTR1, b"\x00\x18"),
             (_DISCTRL, b"\x08\x82\x27"),
